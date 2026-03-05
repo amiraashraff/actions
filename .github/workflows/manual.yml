@@ -1,6 +1,15 @@
 on:
   workflow_dispatch: 
-
+    inputs:
+      enviroments:
+        description: "choose enviroment"
+        required: true
+        defualt: "staging"
+        type: choice
+        options:
+          - staging
+          - production
+ 
 jobs:
   deploy:
     runs-on: ununtu-latest
