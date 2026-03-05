@@ -4,7 +4,7 @@ on:
       enviroments:
         description: "choose enviroment"
         required: true
-        defualt: "staging"
+        default: "staging"
         type: choice
         options:
           - staging
@@ -12,7 +12,7 @@ on:
  
 jobs:
   deploy:
-    runs-on: ununtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy application
         run: echo "Deploying the application..."
